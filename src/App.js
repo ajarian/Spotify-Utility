@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import TopListensLayout from './layouts/TopListens/TopListensLayout';
+import styled from 'styled-components';
+import palette from './theme';
+
+const Container = styled.div`
+  background: linear-gradient(
+    to top right,
+    ${palette.darkGreen},
+    ${palette.lightGreen}
+  );
+  width: 100vw;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <TopListensLayout />
+    </Container>
   );
 }
 
